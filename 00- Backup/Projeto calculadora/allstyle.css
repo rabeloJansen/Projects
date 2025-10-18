@@ -1,0 +1,112 @@
+style{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(70, 170, 240);
+    font: normal 15pt arial;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+    h1#theme {
+    margin-top: 15px;
+    }
+    p#resume {
+    font: normal 12pt arial;
+    margin-top: -25px;
+    }
+
+section#daycard, section#testcard, section#calculatorcard{
+    background: white;
+    color: rgb(58, 58, 58);
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.400);
+}
+
+footer{
+    font: normal 12pt arial;
+}
+
+div#hour, div#day{
+    margin-top: 2px;
+    font: normal 12pt arial;
+}
+
+div#photo{
+    margin-top: 10px;
+}
+
+div#exectest{
+    margin-bottom: 15px;
+    font: normal 12pt arial;
+}
+
+div#execbox{
+    margin: auto;
+    background: yellow;
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+}
+
+div#calculator{
+    background: rgba(128, 128, 128, 0.170);
+    border-radius: 10px;
+    border-color: rgb(200, 200, 200);
+    border-style: solid;
+    border-width: 1px;
+    width: 210px;
+    margin: auto;
+    padding: 5px;
+}
+    div#name{
+        font: normal 12pt arial;
+        margin-top: 5px;
+    }
+        div#display, div#keyboard{
+            border-width: 1px;
+            border-radius: 5px;
+            width: 200px;
+            margin: auto;            
+        }
+            input#displaynum{
+                background: none;
+                width: 190px;
+                height: 40px;
+                margin-top: 4px;
+                margin-bottom: 8px;
+                border-style: dotted;
+                border-color: gray;
+                border-radius: 8px;
+                text-align: center;
+                font: normal 12pt arial;
+            }
+            .butnum{
+                background: rgb(160, 160, 160);
+                width: 50px;
+                height: 50px;
+                border-color: rgb(160, 160, 160);
+                border-radius: 5px;
+                margin-left: -6px;
+                font: normal 15pt arial;
+                color: white;
+            }
+            .butsig{
+                background: gray;
+                width: 50px;
+                height: 50px;
+                border-color: gray;
+                border-radius: 5px;
+                margin-left: -6px;
+                font: normal 15pt arial;
+                color: white;
+            }
+
+

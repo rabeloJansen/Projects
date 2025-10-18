@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Montanha 8000</title>
+    <link rel="stylesheet" href="allstyle.css">
+</head>
+<body onload="day(), load(), buttontest(), buttonnumber(), buttonsignal()">
+    <header>
+        <h1 id="theme">
+            CALCULADORA MONTANHA 8000
+        </h1>
+        <p id="resume">
+            Essa página é um projeto de aprendizagem de <strong>Jansen Rabelo</strong>.
+        </p>
+    </header>
+
+    <section id="daycard">
+        <p>
+            <strong>Seja Bem-vindo</strong>
+        </p>
+        <div id="hour">
+            Aqui vai aparecer a hora
+        </div>
+
+        <div id="day">
+            Aqui vai aparecer o dia
+        </div>
+
+        <div id="photo">
+            <img id="image" src="./package/morning.png" alt="Foto do dia">
+        </div>
+    </section>
+        <br>
+    <section id="testcard">
+        <div id="exectest">
+            Clique para testar esta função:
+        </div>
+
+        <div id="execbox">
+            Iniciar teste...
+        </div>
+            <br>
+        <div id="resultimg"></div>
+    </section>
+        <br>
+    <section id="calculatorcard">
+        <div id="calculator">
+            <div id="name">
+               MONTANHA 8000
+            </div>
+            <div id="display">
+                <input type="text" id="displaynum">             
+            </div>
+            <div id="keyboard">
+                <tr>
+                    <td><input type="button" value="C" id="butclean" onclick="clean()" class="butsig"></td>
+                    <td><input type="button" value="<" id="butback" onclick="back()" class="butsig"></td>
+                    <td><input type="button" value="/" id="butdiv" onclick="insert(value)" class="butsig"></td>
+                    <td><input type="button" value="*" id="butmult" onclick="insert(value)" class="butsig"></td>     
+                </tr>
+                <tr>
+                    <td><input type="button" value="7" id="but7" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="8" id="but8" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="9" id="but9" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="-" id="butsub" onclick="insert(value)" class="butsig"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4" id="but4" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="5" id="but5" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="6" id="but6" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="+" id="butadd" onclick="insert(value)" class="butsig"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1" id="but1" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="2" id="but2" onclick="insert(value)" class="butnum"></td>
+                    <td><input type="button" value="3" id="but3" onclick="insert(value)" class="butnum"></td>
+                    <td rowspan="2">
+                        <input type="button" value="=" id="buteq" class="butsig" onclick="total(value)">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="0" id="zero" onclick="insert(value)"  class="butnum" style="width: 105px;">
+                    </td>
+                    <td><input type="button" value="." id="comma" onclick="insert(value)" class="butnum"></td>                   
+                </tr>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; rabelo.Jansen</p>
+    </footer>
+
+    <script src="welcome.js"></script>
+    <script src="testbox.js"></script>
+    <script src="calculatorengine.js"></script> 
+</body>
+</html>
