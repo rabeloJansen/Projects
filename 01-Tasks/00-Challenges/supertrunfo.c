@@ -7,40 +7,72 @@ int main() {
 
         printf("Super Trunfo - Cartas de Cidades Brasileiras\n");
             printf("\n");
-        printf("Insira os dados das cartas:\n");
+        printf("MENU\n");
             printf("\n");
-                printf("Carta 1:\n");
-                printf("\n Estado: ");
-                    scanf("%s", state1);
-                printf("\n Código: ");
-                    scanf("%s", chartercode1);
-                printf("\n Nome da cidade: ");
-                    scanf("%s", cityname1);
-                printf("\n População: ");
-                    scanf("%lu", &population1);
-                printf("\n Área (em km²): ");
-                    scanf("%f", &area1);
-                printf("\n PIB (bilhões de reais): ");
-                    scanf("%f", &PIB1);
-                printf("\n Número de pontos turísticos: ");
-                    scanf("%d", &turisticpoints1);
+                printf("(1) Iniciar o jogo\n");
+                printf("(2) Regras do jogo\n");
+                printf("(2) Sair\n");
             printf("\n");
-                printf("Carta 2:\n");
-                printf("\n Estado: ");
-                    scanf("%s", state2);
-                printf("\n Código: ");
-                    scanf("%s", chartercode2);
-                printf("\n Nome da cidade: ");
-                    scanf("%s", cityname2);
-                printf("\n População: ");
-                    scanf("%lu", &population2);
-                printf("\n Área (em km²): ");
-                    scanf("%f", &area2);
-                printf("\n PIB (bilhões de reais): ");
-                    scanf("%f", &PIB2);
-                printf("\n Número de pontos turísticos: ");
-                    scanf("%d", &turisticpoints2);
-            printf("\n");
+                printf("Escolha uma opção: ");
+                    scanf("%d", &menu);
+                printf("\n");
+                    switch (menu){
+                    case 1:
+                        printf("Insira os dados das cartas:\n");
+                        printf("\n");
+                            printf("Carta 1:\n");
+                            printf("\n Estado: ");
+                                scanf("%s", state1);
+                            printf("\n Código: ");
+                                scanf("%s", chartercode1);
+                            printf("\n Nome da cidade: ");
+                                scanf("%s", cityname1);
+                            printf("\n População: ");
+                                scanf("%lu", &population1);
+                            printf("\n Área (em km²): ");
+                                scanf("%f", &area1);
+                            printf("\n PIB (bilhões de reais): ");
+                                scanf("%f", &PIB1);
+                            printf("\n Número de pontos turísticos: ");
+                                scanf("%d", &turisticpoints1);
+                        printf("\n");
+                            printf("Carta 2:\n");
+                            printf("\n Estado: ");
+                                scanf("%s", state2);
+                            printf("\n Código: ");
+                                scanf("%s", chartercode2);
+                            printf("\n Nome da cidade: ");
+                                scanf("%s", cityname2);
+                            printf("\n População: ");
+                                scanf("%lu", &population2);
+                            printf("\n Área (em km²): ");
+                                scanf("%f", &area2);
+                            printf("\n PIB (bilhões de reais): ");
+                                scanf("%f", &PIB2);
+                            printf("\n Número de pontos turísticos: ");
+                                scanf("%d", &turisticpoints2);
+                            printf("\n");
+                        break;
+                    case 2:
+                        printf("Regras do jogo:\n");
+                            printf("Cada carta representa uma cidade brasileira com os seguintes atributos:\n");
+                            printf("- População\n");
+                            printf("- Área (em km²)\n");
+                            printf("- PIB (bilhões de reais)\n");
+                            printf("- Número de pontos turísticos\n");
+                            printf("- Densidade populacional (habitantes por km²)\n");
+                            printf("- PIB per capita (reais)\n");
+                            printf("- Super Poder (soma ponderada dos atributos)\n");
+                            printf("\n");
+                        break;
+                    case 3:
+                        printf("Saindo do jogo. Até a próxima!\n");
+                            return 0;
+                        break;
+                    default:
+                        printf("Opção inválida.\n");
+                        break;
+                    }
 
         populationaldensity1 = (float) population1 / area1;
         populationaldensity2 = (float) population2 / area2;
@@ -78,13 +110,14 @@ int main() {
 
         printf("Selecione um ATRIBUTO para comparar as cidades: %s e %s:\n", cityname1, cityname2);
         printf("\n");
-            printf("(1) - POPULAÇÃO\n");
-            printf("(2) - ÁREA\n");
-            printf("(3) - PIB\n");
-            printf("(4) - PONTOS TURÍSTICOS\n");
-            printf("(5) - DENSIDADE POPULACIONAL\n");
-            printf("(6) - PIB PER CAPITA\n");
-            printf("(7) - SUPER PODER\n");
+            printf("(1) POPULAÇÃO\n");
+            printf("(2) ÁREA\n");
+            printf("(3) PIB\n");
+            printf("(4) PONTOS TURÍSTICOS\n");
+            printf("(5) DENSIDADE POPULACIONAL\n");
+            printf("(6) PIB PER CAPITA\n");
+            printf("(7) SUPER PODER\n");
+            printf("(8) Encerrar o jogo.\n");
         printf("\n");        
             printf("ATRIBUTO: ");
                 scanf("%d", &menu);
@@ -181,6 +214,10 @@ int main() {
                             printf("Empate no Super Poder!\n");
                         }
                     printf("\n");
+                break;
+            case 8:
+                printf("Saindo do jogo. Até a próxima!\n");
+                    return 0;
                 break;
             default:
                 printf("Opção inválida. Nenhum atributo selecionado.\n");
