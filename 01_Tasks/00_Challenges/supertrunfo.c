@@ -3,7 +3,7 @@ int main() {
     char state1[20] = "standart", state2[20] = "standart", cityname1[20] = "standart", cityname2[20] = "standart", chartercode1[10] = "standart", chartercode2[10] = "standart";
     int turisticpoints1 = 0, turisticpoints2 = 0, menu = 0;
     unsigned long int population1 = 0, population2 = 0;
-    float area1 = 0.0, area2 = 0.0, PIB1 = 0.0, PIB2 = 0.0, populationaldensity1 = 0.0, populationaldensity2 = 0.0, PIBperC1 = 0.0, PIBperC2 = 0.0, superpower1 = 0.0, superpower2 = 0.0, inversedensity1 = 0.0, inversedensity2 = 0.0;  
+    float area1 = 0.0, area2 = 0.0, PIB1 = 0.0, PIB2 = 0.0, populationaldensity1 = 0.0, populationaldensity2 = 0.0, PIBperC1 = 0.0, PIBperC2 = 0.0, superpower1 = 0.0, superpower2 = 0.0, inversedensity1 = 0.0, inversedensity2 = 0.0;
 
         printf("Super Trunfo - Cartas de Cidades Brasileiras\n");
             printf("\n");
@@ -16,7 +16,7 @@ int main() {
                 printf("Escolha uma opção: ");
                     scanf("%d", &menu);
                 printf("\n");
-                    switch (menu){
+                    switch (menu) {
                     case 1:
                         printf("Insira os dados das cartas:\n");
                         printf("\n");
@@ -108,7 +108,7 @@ int main() {
                 printf("PIB per capita: %.2f reais\n", PIBperC2);
             printf("\n");
 
-        printf("Selecione um ATRIBUTO para comparar as cidades: %s e %s:\n", cityname1, cityname2);
+        printf("Selecione um ATRIBUTO para comparar as cidades: %s (%s) e %s (%s):\n", cityname1, state1, cityname2, state2);
         printf("\n");
             printf("(1) POPULAÇÃO\n");
             printf("(2) ÁREA\n");
