@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main() {
-    char state1[20], state2[20], cityname1[20], cityname2[20], chartercode1[10], chartercode2[10] = "standart";
-    int turisticpoints1, turisticpoints2 = 0;
-    unsigned long int population1, population2 = 0;
-    float area1, area2, PIB1, PIB2, populationaldensity1, populationaldensity2, PIBperC1, PIBperC2, superpower1, superpower2, inversedensity1, inversedensity2 = 0.0;  
+    char state1[20] = "standart", state2[20] = "standart", cityname1[20] = "standart", cityname2[20] = "standart", chartercode1[10] = "standart", chartercode2[10] = "standart";
+    int turisticpoints1 = 0, turisticpoints2 = 0;
+    unsigned long int population1 = 0, population2 = 0;
+    float area1 = 0.0, area2 = 0.0, PIB1 = 0.0, PIB2 = 0.0, populationaldensity1 = 0.0, populationaldensity2 = 0.0, PIBperC1 = 0.0, PIBperC2 = 0.0, superpower1 = 0.0, superpower2 = 0.0, inversedensity1 = 0.0, inversedensity2 = 0.0;  
         printf("Super Trunfo - Cartas de Cidades Brasileiras\n");
             printf("\n");
         printf("Insira os dados das cartas:\n");
@@ -49,8 +49,20 @@ int main() {
         superpower1 = (float) population1 + area1 + PIB1 + turisticpoints1 + PIBperC1 + inversedensity1;
         superpower2 = (float) population2 + area2 + PIB2 + turisticpoints2 + PIBperC2 + inversedensity2;
         printf("Confira os dados das cidades %s e %s:\n", cityname1, cityname2);
+            printf("Comparação das cartas - ATRIBUTO: POPULAÇÃO\n");
+                printf("Carta 1, cidade de %s (%s) - População: %lu\n", cityname1, state1, population1);
+                printf("Carta 2, cidade de %s (%s) - População: %lu\n", cityname2, state2, population2);
+                    if (population1 > population2) {
+                        printf("Vencedor: Carta 1 - %s (%s)\n", cityname1, state1);
+                    } else if (population2 > population1) {
+                        printf("Vencedor: Carta 2 - %s (%s)\n", cityname2, state2);
+                    } else {
+                        printf("Empate na população!\n");
+                    }
             printf("\n");
-                printf("Carta 1:\n");
+
+/* Parte do exercício anterior, mantida como comentário para referência futura
+            printf("Carta 1:\n");
                     printf("Estado: %s\n", state1);
                     printf("Código: %s\n", chartercode1);
                     printf("Nome da cidade: %s\n", cityname1);
@@ -83,6 +95,8 @@ int main() {
                     printf("Densidade populacional: %d\n", inversedensity1 > inversedensity2);
                     printf("Super poder: %d\n", superpower1 > superpower2);
                 printf("\n");
-        printf("Fim do Super Trunfo\n");
+*/
+
+        printf("Fim do Super Trunfo.\n");
     return 0;
 }
