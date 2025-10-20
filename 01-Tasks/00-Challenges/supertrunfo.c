@@ -182,7 +182,7 @@ int main() {
                     printf("Carta 2, cidade de %s (%s) - Densidade Populacional: %.2f hab/km²\n", cityname2, state2, populationaldensity2);
                         if (populationaldensity1 < populationaldensity2) {
                             printf("Vencedor: Carta 1 - %s (%s)\n", cityname1, state1);
-                        } else if (populationaldensity2 > populationaldensity1) {
+                        } else if (populationaldensity2 < populationaldensity1) {
                             printf("Vencedor: Carta 2 - %s (%s)\n", cityname2, state2);
                         } else {
                             printf("Empate na densidade populacional!\n");
