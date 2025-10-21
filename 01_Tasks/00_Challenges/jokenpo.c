@@ -37,7 +37,10 @@ int main() {
                         continue; // Volta ao menu inicial
                     case 3:
                         printf("Saindo do jogo. Até a próxima!\n");
-                            return 0;
+                            printf("Pressione ENTER para sair.\n");
+                            getchar();
+                            getchar();
+                        return 0;
                     default:
                         printf("Opção inválida, tente novamente...\n");
                             continue; // Volta ao menu inicial
@@ -93,8 +96,6 @@ int main() {
                 }
                 
                 printf("\n");
-            printf("Fim do Jokenpô.\n");
-        return 0;
-    }
+        }
     return 0;
 }
