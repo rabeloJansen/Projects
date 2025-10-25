@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int mainMenu = 0, playerChoice = 0, towerPosition = 0;
+    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopPosition = 0,towerPosition = 0;
     
     printf("### Chess Simulator ###\n");
         printf("\n");
@@ -33,41 +33,68 @@ int main() {
 
         while (mainMenu != 4) {        
             printf("Escolha uma PEÇA do tabuleiro:\n");
-            printf("(1) RAINHA\n");
-            printf("(2) BISPO\n");
-            printf("(3) TORRE\n");
+            printf("(1) ♛ RAINHA\n");
+            printf("(2) ♝ BISPO\n");
+            printf("(3) ♜ TORRE\n");
             printf("(4) Voltar ao MENU INICIAL\n");
             printf("(5) Encerrar o jogo.\n");
             printf("\n");
-            printf("Opção: ");
+            printf("Escolha uma opção: ");
                 scanf("%d", &mainMenu);
+            printf("\n");
 
             switch (mainMenu) {
                 case 1:
-                    printf("Você escolheu RAINHA.\n");
-                    printf("Escolha as opções de movimento disponíveis:\n");
+                    printf("Você escolheu ♛ RAINHA.\n");
+                    printf("\n");
+                    printf("Movimento disponíveis:\n");
                         printf("(1) 8 CASAS PARA A ESQUERDA\n");
-                        printf("Opção: ");
+                        printf("\n");
+                        printf("Escolha uma opção: ");
                             scanf("%d", &playerChoice);
+                        printf("\n");
+
+                        // Opção de estrutura de repetição utilizando WHILE
+                        while (queenPosition < 8) {
+                            queenPosition++;
+                            printf("A RAINHA se movimentou: %d casas para a ESQUERDA\n", queenPosition);
+                        }
+                        printf("A posição atual da RAINHA ♕ é: %d casas para a ESQUERDA\n", queenPosition);  
+
                     break;
                 case 2:
-                    printf("Você escolheu BISPO.\n");
-                    printf("Escolha as opções de movimento disponíveis:\n");
+                    printf("Você escolheu ♝ BISPO.\n");
+                    printf("\n");
+                    printf("Movimento disponíveis:\n");
                         printf("(1) 5 CASAS NA DIAGONAL PARA CIMA E A DIREITA\n");
-                        printf("Opção: ");
+                        printf("\n");
+                        printf("Escolha uma opção: ");
                             scanf("%d", &playerChoice);
+                        printf("\n");
+                        
+                        // Opção de estrutura de repetição utilizando DO WHILE
+                        do {
+                            bishopPosition++;
+                            printf("O BISPO se movimentou: %d casas na DIAGONAL PARA CIMA E A DIREITA\n", bishopPosition);
+                        } while (bishopPosition < 5);
+                        printf("A posição atual do BISPO ♗ é: %d casas na DIAGONAL PARA CIMA E A DIREITA\n", bishopPosition);
+
                     break;
                 case 3:
-                    printf("Você escolheu TORRE.\n");
-                    printf("Escolha as opções de movimento disponíveis:\n");
+                    printf("Você escolheu ♜ TORRE.\n");
+                    printf("\n");
+                    printf("Movimento disponíveis:\n");
                         printf("(1) 5 CASAS PARA A DIREITA\n");
-                        printf("Opção: ");
+                        printf("\n");
+                        printf("Escolha uma opção: ");
                             scanf("%d", &playerChoice);
+                        printf("\n");
 
+                        // Opção de estrutura de repetição utilizando FOR
                         for (towerPosition = 1; towerPosition < 5; towerPosition++) {
                         printf("A TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
                         }
-                        printf("A posição da TORRE é: %d casas a DIREITA\n", towerPosition);
+                        printf("A posição atual da TORRE ♖ é: %d casas a DIREITA\n", towerPosition);
 
                     break;
                 case 4:
