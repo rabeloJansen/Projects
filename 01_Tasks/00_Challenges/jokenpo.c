@@ -101,24 +101,25 @@ int main() {
         printf("(1) Tentar novamente?\n");
         printf("(2) Sair\n");
             printf("\n");
-                printf("Escolha uma opção: ");
-                    scanf("%d", &playerChoice);
-                printf("\n");
-            switch (playerChoice) {
-                case 1:
-                    printf("Iniciando o jogo...\n");
-                        printf("\n");
-                    continue;
-                case 2:
-                    printf("Saindo do jogo... Até a próxima!\n");
-                        printf("Pressione ENTER para sair.\n");
-                        getchar();
-                        getchar();
-                    break;
-                default:
-                    printf("Opção inválida, saindo do jogo!\n");
-                    break;
-            }
+        printf("Escolha uma opção: ");
+            scanf("%d", &playerChoice);
+        printf("\n");
+        
+        switch (playerChoice) {
+            case 1:
+                printf("Iniciando o jogo...\n");
+                    printf("\n");
+                continue;
+            case 2:
+                printf("Saindo do jogo... Até a próxima!\n");
+                    printf("Pressione ENTER para sair.\n");
+                    getchar();
+                    getchar();
+                break;
+            default:
+                printf("Opção inválida, saindo do jogo!\n");
+                break;
+        }
     }    
         
     return 0;
