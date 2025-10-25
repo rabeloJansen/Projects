@@ -70,9 +70,8 @@ int main() {
                 printf("Você escolheu TESOURA.\n");
                 break;
             default:
-                printf("Opção inválida! Saindo do jogo.\n");
-                    return 0;
-                break;
+                printf("Opção inválida, tente novamente...\n");
+                continue;;
         }
 
         switch (computerChoice) {
@@ -111,13 +110,13 @@ int main() {
                         printf("\n");
                     continue;
                 case 2:
-                    printf("Saindo do jogo. Até a próxima!\n");
+                    printf("Saindo do jogo... Até a próxima!\n");
                         printf("Pressione ENTER para sair.\n");
                         getchar();
                         getchar();
-                    return 0;
+                    break;
                 default:
-                    printf("Opção inválida, tente novamente...\n");
+                    printf("Opção inválida, saindo do jogo!\n");
                     break;
             }
     }    
