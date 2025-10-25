@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopPosition = 0,towerPosition = 0;
+    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopPosition = 0, towerPosition = 0, horsePosition = 1, move1 = 0, move2 = 0;
     
     printf("### Chess Simulator ###\n");
         printf("\n");
@@ -36,8 +36,11 @@ int main() {
             printf("(1) ♛ RAINHA\n");
             printf("(2) ♝ BISPO\n");
             printf("(3) ♜ TORRE\n");
-            printf("(4) Voltar ao MENU INICIAL\n");
-            printf("(5) Encerrar o jogo.\n");
+            printf("(4) ♞ CAVALO\n");
+            printf("\n");
+            printf("Outras opções:\n");
+            printf("(5) Voltar ao MENU INICIAL\n");
+            printf("(6) Encerrar o jogo.\n");
             printf("\n");
             printf("Escolha uma opção: ");
                 scanf("%d", &mainMenu);
@@ -98,9 +101,32 @@ int main() {
 
                     break;
                 case 4:
-                    printf("Voltando ao MENU INICIAL...\n");
+                    printf("Você escolheu ♞ CAVALO.\n");
+                    printf("\n");
+                    printf("Movimento disponíveis:\n");
+                        printf("(1) 2 CASAS PARA BAIXO E 1 CASA PARA A ESQUERDA\n");
+                        printf("\n");
+                        printf("Escolha uma opção: ");
+                            scanf("%d", &playerChoice);
+                        printf("\n");
+
+                        // Opção de estrutura de repetição aninhada utilizando WHILE + FOR
+                        while (horsePosition--) {
+                            horsePosition = 0;
+                            move2 = 0;                        
+                            for (move1 = 0; move1 <= 1; move1++) {
+                                printf("O CAVALO se movimentou: %d casas para BAIXO\n", move1 + 1);
+                            }
+                            move2++;                            
+                            printf("O CAVALO se movimentou: %d casa para ESQUERDA\n", move2);
+                        }
+                        printf("A posição atual do CAVALO ♘ é: %d casas para BAIXO e %d casa para ESQUERDA\n", move1, move2);
+
                     break;
                 case 5:
+                    printf("Voltando ao MENU INICIAL...\n");
+                    break;
+                case 6:
                     printf("Saindo do jogo... Até a próxima!\n");
                     printf("Pressione ENTER para sair.\n");
                     getchar();
