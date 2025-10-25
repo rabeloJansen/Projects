@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopPosition = 0, towerPosition = 0, horsePosition = 1, move1 = 0, move2 = 0;
+    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopAxisX = 0, bishopAxisY = 0, towerPosition = 0, horsePosition = 1;
     
     printf("### Chess Simulator ###\n");
         printf("\n");
@@ -31,7 +31,7 @@ int main() {
                 continue;
         }
 
-        while (mainMenu != 4) {        
+        while (mainMenu != 4) {
             printf("Escolha uma PEÇA do tabuleiro:\n");
             printf("(1) ♛ RAINHA\n");
             printf("(2) ♝ BISPO\n");
@@ -60,9 +60,9 @@ int main() {
                         // Opção de estrutura de repetição utilizando WHILE
                         while (queenPosition < 8) {
                             queenPosition++;
-                            printf("A RAINHA se movimentou: %d casas para a ESQUERDA\n", queenPosition);
+                            printf("A ♛ RAINHA se movimentou: %d casas para a ESQUERDA\n", queenPosition);
                         }
-                        printf("A posição atual da RAINHA ♕ é: %d casas para a ESQUERDA\n", queenPosition);  
+                        printf("A posição atual da ♛ RAINHA é: %d casas para a ESQUERDA\n", queenPosition);  
 
                     break;
                 case 2:
@@ -75,12 +75,14 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
                         
-                        // Opção de estrutura de repetição utilizando DO WHILE
-                        do {
-                            bishopPosition++;
-                            printf("O BISPO se movimentou: %d casas na DIAGONAL PARA CIMA E A DIREITA\n", bishopPosition);
-                        } while (bishopPosition < 5);
-                        printf("A posição atual do BISPO ♗ é: %d casas na DIAGONAL PARA CIMA E A DIREITA\n", bishopPosition);
+                        // Opção de estrutura de repetição utilizando FOR
+                        for (bishopAxisX = 1, bishopAxisY = 1; bishopAxisX < 5, bishopAxisY < 5; bishopAxisX++, bishopAxisY++) {
+                            printf("O ♝ BISPO se movimentou: %d casas para a CIMA\n", bishopAxisX);
+                            printf("O ♝ BISPO se movimentou: %d casas para a DIREITA\n", bishopAxisY);
+                        }
+                        printf("O ♝ BISPO se movimentou: %d casas para a CIMA\n", bishopAxisX);
+                        printf("O ♝ BISPO se movimentou: %d casas para a DIREITA\n", bishopAxisY);
+                        printf("A posição atual do ♝ BISPO é: %d casas para CIMA e %d casas para a DIREITA\n", bishopAxisX, bishopAxisY);
 
                     break;
                 case 3:
@@ -93,11 +95,12 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
-                        // Opção de estrutura de repetição utilizando FOR
-                        for (towerPosition = 1; towerPosition < 5; towerPosition++) {
-                        printf("A TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
-                        }
-                        printf("A posição atual da TORRE ♖ é: %d casas a DIREITA\n", towerPosition);
+                        // Opção de estrutura de repetição utilizando DO WHILE
+                        do {
+                            towerPosition++;
+                            printf("A ♖ TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
+                        } while (towerPosition < 5);
+                        printf("A posição atual da ♖ TORRE é: %d casas a DIREITA\n", towerPosition);
 
                     break;
                 case 4:
@@ -112,15 +115,15 @@ int main() {
 
                         // Opção de estrutura de repetição aninhada utilizando WHILE + FOR
                         while (horsePosition--) {
-                            horsePosition = 0;
-                            move2 = 0;                        
+                            int move1 = 0, move2 = 0;
+                            horsePosition = 0;                      
                             for (move1 = 0; move1 <= 1; move1++) {
-                                printf("O CAVALO se movimentou: %d casas para BAIXO\n", move1 + 1);
+                                printf("O ♞ CAVALO se movimentou: %d casas para BAIXO\n", move1 + 1);
                             }
                             move2++;                            
                             printf("O CAVALO se movimentou: %d casa para ESQUERDA\n", move2);
+                            printf("A posição atual do ♞ CAVALO é: %d casas para BAIXO e %d casa para ESQUERDA\n", move1, move2);
                         }
-                        printf("A posição atual do CAVALO ♘ é: %d casas para BAIXO e %d casa para ESQUERDA\n", move1, move2);
 
                     break;
                 case 5:
