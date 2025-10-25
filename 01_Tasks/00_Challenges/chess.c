@@ -29,7 +29,7 @@
     }
 
 int main() {
-    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopAxisX = 0, bishopAxisY = 0, towerPosition = 0, horsePosition = 1;
+    int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopPosition = 0, horsePosition = 1;
     
     printf("### Chess Simulator ###\n");
         printf("\n");
@@ -59,7 +59,7 @@ int main() {
                 continue;
         }
 
-        while (mainMenu != 4) {
+        while (mainMenu != 5) {
             printf("Escolha uma PEÇA do tabuleiro:\n");
             printf("(1) ♛ RAINHA\n");
             printf("(2) ♝ BISPO\n");
@@ -85,6 +85,7 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
+                        // Opção de estrutura de repetição avançada utilizando RECURSÃO
                         moveAxisXnegative(8);
 
                         /* Opção de estrutura de repetição utilizando WHILE
@@ -106,8 +107,16 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
-                        moveAxisXpositive(5);
-                        moveAxisYpositive(5);
+                        // Opção de estrutura de repetição avançada utilizando RECURSÃO e com loops aninhados
+                        while (bishopPosition <= 5) {
+                            bishopPosition++;
+                            moveAxisYpositive(5);
+                                while (bishopPosition <= 5){
+                                    moveAxisXpositive(5);
+                                    break;
+                                }
+                            break;
+                        }                        
                         
                         /* Opção de estrutura de repetição avançada utilizando FOR
                         for (bishopAxisX = 1, bishopAxisY = 1; bishopAxisX < 5, bishopAxisY < 5; bishopAxisX++, bishopAxisY++) {
@@ -130,6 +139,7 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
+                        // Opção de estrutura de repetição avançada utilizando RECURSÃO
                         moveAxisXpositive(5);
 
                         /* Opção de estrutura de repetição utilizando DO WHILE
@@ -156,11 +166,10 @@ int main() {
                             int move1 = 0, move2 = 0;
                             horsePosition = 0;                      
                             for (move1 = 0; move1 <= 1; move1++) {
-                                printf("O ♞ CAVALO se movimentou: %d casas para CIMA\n", move1 + 1);
+                                printf("Movimentou %d casas para CIMA\n", move1 + 1);
                             }
                             move2++;                            
-                            printf("O CAVALO se movimentou: %d casa para DIREITA\n", move2);
-                            printf("A posição atual do ♞ CAVALO é: %d casas para CIMA e %d casa para DIREITA\n", move1, move2);
+                            printf("Movimentou %d casas para DIREITA\n", move2);
                         }
 
                     break;
