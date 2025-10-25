@@ -7,39 +7,39 @@ int main() {
     srand(time(0));
  
     printf("### Jokenpô - Pedra, Papel ou Tesoura ###\n");
-        printf("\n");
+    printf("\n");
 
     while (playerChoice != 1) {  
-    printf("MENU INICIAL:\n");
+        printf("MENU INICIAL:\n");
+        printf("(1) Iniciar o jogo\n");
+        printf("(2) Regras do jogo\n");
+        printf("(3) Sair\n");
         printf("\n");
-            printf("(1) Iniciar o jogo\n");
-            printf("(2) Regras do jogo\n");
-            printf("(3) Sair\n");
+        printf("Escolha uma opção: ");
+            scanf("%d", &playerChoice);
         printf("\n");
-            printf("Escolha uma opção: ");
-                scanf("%d", &playerChoice);
-            printf("\n");
+
         switch (playerChoice) {
             case 1:
                 printf("Iniciando o jogo...\n");
-                    printf("\n");
+                printf("\n");
                 break;
             case 2:
                 printf("Regras do jogo:\n");
-                    printf("PEDRA vence TESOURA\n");
-                    printf("TESOURA vence PAPEL\n");
-                    printf("PAPEL vence PPEDRA\n");
-                    printf("Em caso de empate, ninguém ganha!\n");
-                    printf("\n");
-                    printf("Pressione ENTER para voltar ao MENU INICIAL.\n");
-                    getchar();
-                    getchar();
+                printf("PEDRA vence TESOURA\n");
+                printf("TESOURA vence PAPEL\n");
+                printf("PAPEL vence PPEDRA\n");
+                printf("Em caso de empate, ninguém ganha!\n");
+                printf("\n");
+                printf("Pressione ENTER para voltar ao MENU INICIAL.\n");
+                getchar();
+                getchar();
                 continue;
             case 3:
-                printf("Saindo do jogo. Até a próxima!\n");
-                    printf("Pressione ENTER para sair.\n");
-                    getchar();
-                    getchar();
+                printf("Saindo do jogo... Até a próxima!\n");
+                printf("Pressione ENTER para sair.\n");
+                getchar();
+                getchar();
                 return 0;
             default:
                 printf("Opção inválida, tente novamente...\n");
@@ -49,13 +49,13 @@ int main() {
 
     while (playerChoice != 2) {
         printf("Escolha sua jogada:\n");
-            printf("(1) PEDRA\n");
-            printf("(2) PAPEL\n");
-            printf("(3) TESOURA\n");
+        printf("(1) PEDRA\n");
+        printf("(2) PAPEL\n");
+        printf("(3) TESOURA\n");
         printf("\n");
-            printf("Opção: ");
-                scanf("%d", &playerChoice);
-            printf("\n");
+        printf("Opção: ");
+            scanf("%d", &playerChoice);
+        printf("\n");
 
         computerChoice = (rand() % 3) + 1; // Gera número aleatório entre 1 e 3 para o computador
 
@@ -100,7 +100,7 @@ int main() {
 
         printf("(1) Tentar novamente?\n");
         printf("(2) Sair\n");
-            printf("\n");
+        printf("\n");
         printf("Escolha uma opção: ");
             scanf("%d", &playerChoice);
         printf("\n");
@@ -108,13 +108,13 @@ int main() {
         switch (playerChoice) {
             case 1:
                 printf("Iniciando o jogo...\n");
-                    printf("\n");
+                printf("\n");
                 continue;
             case 2:
                 printf("Saindo do jogo... Até a próxima!\n");
-                    printf("Pressione ENTER para sair.\n");
-                    getchar();
-                    getchar();
+                printf("Pressione ENTER para sair.\n");
+                getchar();
+                getchar();
                 break;
             default:
                 printf("Opção inválida, saindo do jogo!\n");
