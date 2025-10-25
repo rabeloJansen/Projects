@@ -31,46 +31,60 @@ int main() {
                 continue;
         }
 
-        printf("Escolha uma PEÇA do tabuleiro:\n");
-        printf("(1) RAINHA\n");
-        printf("(2) BISPO\n");
-        printf("(3) TORRE\n");
-        printf("\n");
-        printf("Opção: ");
-            scanf("%d", &mainMenu);
+        while (mainMenu != 4) {        
+            printf("Escolha uma PEÇA do tabuleiro:\n");
+            printf("(1) RAINHA\n");
+            printf("(2) BISPO\n");
+            printf("(3) TORRE\n");
+            printf("(4) Voltar ao MENU INICIAL\n");
+            printf("(5) Encerrar o jogo.\n");
+            printf("\n");
+            printf("Opção: ");
+                scanf("%d", &mainMenu);
 
-        switch (mainMenu) {
-            case 1:
-                printf("Você escolheu RAINHA.\n");
-                printf("Escolha as opções de movimento disponíveis:\n");
-                    printf("(1) 8 CASAS PARA A ESQUERDA\n");
-                    printf("Opção: ");
-                        scanf("%d", &playerChoice);
-                break;
-            case 2:
-                printf("Você escolheu BISPO.\n");
-                printf("Escolha as opções de movimento disponíveis:\n");
-                    printf("(1) 5 CASAS NA DIAGONAL PARA CIMA E A DIREITA\n");
-                    printf("Opção: ");
-                        scanf("%d", &playerChoice);
-                break;
-            case 3:
-                printf("Você escolheu TORRE.\n");
-                printf("Escolha as opções de movimento disponíveis:\n");
-                    printf("(1) 5 CASAS PARA A DIREITA\n");
-                    printf("Opção: ");
-                        scanf("%d", &playerChoice);
-                    for (towerPosition = 1; towerPosition < 5; towerPosition++) {
-                    printf("A TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
-                    }
-                    printf("A posição da TORRE é: %d casas para a DIREITA\n", towerPosition);
-                break;
-            default:
-                printf("Opção inválida, tente novamente...\n");
-                continue;
+            switch (mainMenu) {
+                case 1:
+                    printf("Você escolheu RAINHA.\n");
+                    printf("Escolha as opções de movimento disponíveis:\n");
+                        printf("(1) 8 CASAS PARA A ESQUERDA\n");
+                        printf("Opção: ");
+                            scanf("%d", &playerChoice);
+                    break;
+                case 2:
+                    printf("Você escolheu BISPO.\n");
+                    printf("Escolha as opções de movimento disponíveis:\n");
+                        printf("(1) 5 CASAS NA DIAGONAL PARA CIMA E A DIREITA\n");
+                        printf("Opção: ");
+                            scanf("%d", &playerChoice);
+                    break;
+                case 3:
+                    printf("Você escolheu TORRE.\n");
+                    printf("Escolha as opções de movimento disponíveis:\n");
+                        printf("(1) 5 CASAS PARA A DIREITA\n");
+                        printf("Opção: ");
+                            scanf("%d", &playerChoice);
+
+                        for (towerPosition = 1; towerPosition < 5; towerPosition++) {
+                        printf("A TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
+                        }
+                        printf("A posição da TORRE é: %d casas a DIREITA\n", towerPosition);
+
+                    break;
+                case 4:
+                    printf("Voltando ao MENU INICIAL...\n");
+                    break;
+                case 5:
+                    printf("Saindo do jogo... Até a próxima!\n");
+                    printf("Pressione ENTER para sair.\n");
+                    getchar();
+                    getchar();
+                    return 0;
+                default:
+                    printf("Opção inválida, tente novamente...\n");
+                    continue;
+            }
+            printf("\n");
         }
-        printf("\n");
-        
     }
     return 0; 
 }
