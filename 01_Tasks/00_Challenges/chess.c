@@ -1,5 +1,33 @@
 #include <stdio.h>
 
+    void moveAxisXpositive(int action) {
+        if (action > 0) {        
+            moveAxisXpositive(action - 1);
+            printf("Movimentou 1 casa para DIREITA\n");
+        }
+    }
+
+    void moveAxisXnegative(int action) {
+        if (action > 0) {        
+            moveAxisXnegative(action - 1);
+            printf("Movimentou 1 casa para ESQUERDA\n");
+        }
+    }
+
+    void moveAxisYpositive(int action) {
+        if (action > 0) {        
+            moveAxisYpositive(action - 1);
+            printf("Movimentou 1 casa para CIMA\n");
+        }
+    }
+
+    void moveAxisYnegative(int action) {
+        if (action > 0) {        
+            moveAxisYnegative(action - 1);
+            printf("Movimentou 1 casa para BAIXO\n");
+        }
+    }
+
 int main() {
     int mainMenu = 0, playerChoice = 0, queenPosition = 0, bishopAxisX = 0, bishopAxisY = 0, towerPosition = 0, horsePosition = 1;
     
@@ -57,12 +85,15 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
-                        // Opção de estrutura de repetição utilizando WHILE
+                        moveAxisXnegative(8);
+
+                        /* Opção de estrutura de repetição utilizando WHILE
                         while (queenPosition < 8) {
                             queenPosition++;
                             printf("A ♛ RAINHA se movimentou: %d casas para a ESQUERDA\n", queenPosition);
                         }
                         printf("A posição atual da ♛ RAINHA é: %d casas para a ESQUERDA\n", queenPosition);  
+                        */
 
                     break;
                 case 2:
@@ -75,7 +106,7 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
                         
-                        // Opção de estrutura de repetição utilizando FOR
+                        // Opção de estrutura de repetição avançada utilizando FOR
                         for (bishopAxisX = 1, bishopAxisY = 1; bishopAxisX < 5, bishopAxisY < 5; bishopAxisX++, bishopAxisY++) {
                             printf("O ♝ BISPO se movimentou: %d casas para a CIMA\n", bishopAxisX);
                             printf("O ♝ BISPO se movimentou: %d casas para a DIREITA\n", bishopAxisY);
@@ -107,22 +138,22 @@ int main() {
                     printf("Você escolheu ♞ CAVALO.\n");
                     printf("\n");
                     printf("Movimento disponíveis:\n");
-                        printf("(1) 2 CASAS PARA BAIXO E 1 CASA PARA A ESQUERDA\n");
+                        printf("(1) 2 CASAS PARA CIMA E 1 CASA PARA A DIREITA\n");
                         printf("\n");
                         printf("Escolha uma opção: ");
                             scanf("%d", &playerChoice);
                         printf("\n");
 
                         // Opção de estrutura de repetição aninhada utilizando WHILE + FOR
-                        while (horsePosition--) {
+                        while (horsePosition++) {
                             int move1 = 0, move2 = 0;
                             horsePosition = 0;                      
                             for (move1 = 0; move1 <= 1; move1++) {
-                                printf("O ♞ CAVALO se movimentou: %d casas para BAIXO\n", move1 + 1);
+                                printf("O ♞ CAVALO se movimentou: %d casas para CIMA\n", move1 + 1);
                             }
                             move2++;                            
-                            printf("O CAVALO se movimentou: %d casa para ESQUERDA\n", move2);
-                            printf("A posição atual do ♞ CAVALO é: %d casas para BAIXO e %d casa para ESQUERDA\n", move1, move2);
+                            printf("O CAVALO se movimentou: %d casa para DIREITA\n", move2);
+                            printf("A posição atual do ♞ CAVALO é: %d casas para CIMA e %d casa para DIREITA\n", move1, move2);
                         }
 
                     break;
