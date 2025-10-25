@@ -3,28 +3,28 @@
     void moveAxisXpositive(int action) {
         if (action > 0) {        
             moveAxisXpositive(action - 1);
-            printf("Movimentou 1 casa para DIREITA\n");
+            printf("Movimentou %d casas para DIREITA\n", action);
         }
     }
 
     void moveAxisXnegative(int action) {
         if (action > 0) {        
             moveAxisXnegative(action - 1);
-            printf("Movimentou 1 casa para ESQUERDA\n");
+            printf("Movimentou %d casas para ESQUERDA\n", action);
         }
     }
 
     void moveAxisYpositive(int action) {
         if (action > 0) {        
             moveAxisYpositive(action - 1);
-            printf("Movimentou 1 casa para CIMA\n");
+            printf("Movimentou %d casas para CIMA\n", action);
         }
     }
 
     void moveAxisYnegative(int action) {
         if (action > 0) {        
             moveAxisYnegative(action - 1);
-            printf("Movimentou 1 casa para BAIXO\n");
+            printf("Movimentou %d casas para BAIXO\n", action);
         }
     }
 
@@ -105,8 +105,11 @@ int main() {
                         printf("Escolha uma opção: ");
                             scanf("%d", &playerChoice);
                         printf("\n");
+
+                        moveAxisXpositive(5);
+                        moveAxisYpositive(5);
                         
-                        // Opção de estrutura de repetição avançada utilizando FOR
+                        /* Opção de estrutura de repetição avançada utilizando FOR
                         for (bishopAxisX = 1, bishopAxisY = 1; bishopAxisX < 5, bishopAxisY < 5; bishopAxisX++, bishopAxisY++) {
                             printf("O ♝ BISPO se movimentou: %d casas para a CIMA\n", bishopAxisX);
                             printf("O ♝ BISPO se movimentou: %d casas para a DIREITA\n", bishopAxisY);
@@ -114,6 +117,7 @@ int main() {
                         printf("O ♝ BISPO se movimentou: %d casas para a CIMA\n", bishopAxisX);
                         printf("O ♝ BISPO se movimentou: %d casas para a DIREITA\n", bishopAxisY);
                         printf("A posição atual do ♝ BISPO é: %d casas para CIMA e %d casas para a DIREITA\n", bishopAxisX, bishopAxisY);
+                        */
 
                     break;
                 case 3:
@@ -126,12 +130,15 @@ int main() {
                             scanf("%d", &playerChoice);
                         printf("\n");
 
-                        // Opção de estrutura de repetição utilizando DO WHILE
+                        moveAxisXpositive(5);
+
+                        /* Opção de estrutura de repetição utilizando DO WHILE
                         do {
                             towerPosition++;
                             printf("A ♖ TORRE se movimentou: %d casas para a DIREITA\n", towerPosition);
                         } while (towerPosition < 5);
                         printf("A posição atual da ♖ TORRE é: %d casas a DIREITA\n", towerPosition);
+                        */
 
                     break;
                 case 4:
